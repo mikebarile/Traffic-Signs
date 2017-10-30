@@ -3,7 +3,7 @@
 
 .git
 .eggs
-.p
+*.p
 eggs
 lib
 lib64
@@ -13,3 +13,4 @@ var
 *.pyc
 *.swp
 .DS_Store
+
