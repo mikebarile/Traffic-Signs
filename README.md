@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition**
+# **Traffic Sign Recognition**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -20,9 +20,8 @@ The goals / steps of this project are the following:
 [image8]: ./traffic-sign-examples/test_6.png "Test image 6"
 
 ---
-###Writeup / README
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
 Below is a summary of the traffic signs dataset that I generated using the shape property of the training images / labels arrays:
 
@@ -42,7 +41,7 @@ I also printed a random image with its label classification to test that the ima
 
 ![alt text][image1]
 
-###Data preprocessing and visualization
+### Data preprocessing and visualization
 
 At first, I tried converting the images to greyscale. Example below:
 
@@ -54,7 +53,7 @@ I also tried augmenting the dataset. At first, I tried 5x'ing the number of samp
 
 As a last step, I normalized the data to values between 0 and 1. This was to simplify the input we are feeding into the tensorflow model and to boost performance.
 
-###Model architecture
+### Model architecture
 
 My final model consisted of the following layers:
 
@@ -71,7 +70,7 @@ The architecture is based off of LeNet but with the following tweaks:
 * Removed the 2nd max pooling layer to boost performance
 * Added dropout to improve generalization
 
-###Model Training
+### Model Training
 
 I trained the model using the following architecture:
 * Softmax logits using architecture listed above
@@ -87,7 +86,7 @@ I also used the following hyperparameters:
 * LEARNING_RATE = 0.001
 * COLOR_CHANNELS = 3
 
-###Iteration to achieve >93% validation set accuracy
+### Iteration to achieve >93% validation set accuracy
 
 My final model results were:
 * Training set accuracy: 99.8%
@@ -102,7 +101,7 @@ Next I tried augmenting the dataset. At first, I used around 5 different image a
 
 In my next iteration, I tried lowering the magnitude of image augmentation and maintained a test set that was the same size as the original training set. I also removed the 2nd max pooling layer from my LeNet architecture - this is because my GPU was able to handle the compute load. Removing the pooling layer and reducing the image augmentation gave me the final boost I needed with a final 94.6% validation set accuracy.
 
-###Testing the model on new images
+### Testing the model on new images
 
 Here are six German traffic signs that I found on the web:
 
